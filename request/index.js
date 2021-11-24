@@ -3,7 +3,7 @@ const util = require('util')
 const qs = require('qs')
 const requestPromise = util.promisify(request)
 
-module.exports = function (options){
+module.exports = function (options) {
   options.method = options.method.toUpperCase()
   if(options.method === 'GET'){
     if(options.params){
@@ -11,15 +11,15 @@ module.exports = function (options){
       options.url = `${options.url}?${params}`
     }
   }
-  if(
+  if (
     options.method === 'POST' ||
     options.method === 'PUT' ||
     options.method === 'DELETE'
-  ){
-    if(options.body) {
+  ) {
+    if (options.body) {
       options.body = JSON.stringify(options.body)
     }
-    if(!options.headers) {
+    if (!options.headers) {
       options.headers = {}
     }
     options.headers = {
