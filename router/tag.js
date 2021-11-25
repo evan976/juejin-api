@@ -19,11 +19,11 @@ tagRouter.post('/list', async (req, res) => {
 })
 
 tagRouter.post('/detail', async(req, res) => {
-  const data = req.query
+  const data = req.body
   const options = {
     url: `https://api.juejin.cn/tag_api/v1/query_tag_detail`,
     method: "POST",
-    params: {
+    body: {
       key_word: data.key_word
     }
   };

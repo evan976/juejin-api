@@ -111,12 +111,9 @@
 
 请求方式：`POST`
 
-查询参数：
+请求体参数：
 
 - `key_word` - 关键词
-
-例如：`/tags/detail?key_word=前端`
-
 
 ## 分类
 
